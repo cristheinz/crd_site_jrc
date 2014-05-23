@@ -1,0 +1,174 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$shadow-color-from:         rgba( 0,   0,   0, 0.398438); //BLACK
+$shadow-color-to:           rgba( 0,   0,   0, 0.0742188); //BLACK
+
+/* universal */
+html {
+  //overflow-y: hidden;
+  overflow-x: hidden;
+
+}
+
+body {
+  //padding-top: 60px;
+  //padding-bottom: 120px;
+  background: url('http://thumbs.dreamstime.com/z/ferramentas-do-cabelo-e-do-cabeleireiro-3903334.jpg') no-repeat;
+  background-size:cover;
+  
+  //background-color: #000;
+  //background: url('version.jpg') bottom left no-repeat fixed;
+  //background-position: left bottom;
+  //background-repeat: no-repeat;
+}
+
+html,body{
+    height: 100%
+}
+
+a {
+	//color:red;
+}
+
+#wrapper{
+    min-height: 100%;
+    position:relative;
+}
+#main{
+  //min-height: 670px;
+  padding-bottom: 160px;    /* height of footer */
+}
+
+header {
+	padding-top: 60px;
+}
+footer {
+  padding-top: 10px;
+  color: white;
+  height: 160px; 
+  width:100%;
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  background:rgba(0,0,0,0.7);
+}
+.crd-brand {
+	font-family: 'Audiowide', cursive;
+	font-size: 42px;
+	opacity: 0.8;
+  text-shadow: 0 0 1px #000;
+  color: hsla(0,0%,0%,0);
+}
+#brand2 {
+  //opacity: 0.8;
+  text-shadow: 0 0 1px #000;
+}
+.crd-fade {
+  -webkit-animation: FadeIn 2s linear 0s forwards;
+  -moz-animation: FadeIn 2s linear 0s forwards;
+  animation: FadeIn 2s linear 0s forwards;
+}
+.crd-fade2 {
+  opacity:0;
+  display: inline-block;
+  //color: hsla(0,0%,0%,0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  
+  -webkit-animation: FadeIn 4s linear 1s forwards;
+  -moz-animation: FadeIn 4s linear 1s forwards;
+  animation: FadeIn 4s linear 1s forwards;
+}
+.crd-nav {
+	padding-top: 30px;
+	font-family: 'Audiowide', cursive;
+	font-size: 22px;
+	//text-shadow: $shadow-color-from 0px 1px 3px, $shadow-color-to 0px 0px 30px;
+}
+.crd-nav > li > a{
+	color: black;
+}
+.crd-box {
+	background:rgba(0,0,0,0.3);
+	padding: 10px;
+	color: white;
+	min-height: 600px;
+}
+/* Large desktop */
+@media (min-width: 1200px) { 
+  .crd-brand {
+    font-size: 48px;
+  }
+  .crd-nav {
+    font-size: 28px;
+  }
+}
+
+/* Effects */
+@-webkit-keyframes FadeIn { 
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 50px #000;
+  }
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 1px #000;
+  }
+}
+
+@-moz-keyframes FadeIn { 
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 50px #000;
+  }
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 1px #000;
+  }
+}
+
+@keyframes FadeIn { 
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 50px #000;
+  }
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 1px #000;
+  }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .crd-brand {
+    font-size: 32px;
+  }
+  .crd-nav {
+    font-size: 16px;
+  }
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .crd-brand {
+    font-size: 28px;
+  }
+  .crd-nav {
+    font-size: 18px;
+  }
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .crd-brand {
+    font-size: 28px;
+  }
+  .crd-nav {
+    font-size: 16px;
+  }
+}

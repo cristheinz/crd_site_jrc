@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hair Styling and Body Clinic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="wrapper">
+		<%= render 'layouts/header' %>
+ 		<div id="main" class="container">
+   			<%= render 'layouts/browsercheck' %>
+   			<div class="row">
+				<div class="span9 offset2 crd-box">
+   					<%= yield %>
+   				</div>
+   			</div>
+		 </div>
+		 <%= render 'layouts/footer' %>
+	</div>
+</body>
+</html>
