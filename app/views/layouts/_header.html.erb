@@ -12,23 +12,19 @@
         <li><%= link_to "Cursos", curso_path %></li>
         <li><%= link_to "Contactos", contacto_path %></li>
       </ul>
-      <ul class="crd-nav nav nav-pills hidden-phone">
-        <li class="active"><%= link_to "Sobre Nós", root_path, :'data-toggle' => "pill", :'data-target' => "#" %></li>
+      
+      <ul id="nav" class="crd-nav nav nav-pills hidden-phone fadeInLeftBig">
+        <li class="active"><%= link_to "Sobre Nós", root_path(root: '1'), :'data-toggle' => "pill", :'data-target' => "#", class: "root" %></li>
         <li><%= link_to "Cursos", curso_path, :'data-toggle' => "pill", :'data-target' => "#" %></li>
         <li><%= link_to "Contactos", contacto_path, :'data-toggle' => "pill", :'data-target' => "#" %></li>
       </ul>
+
     </div>
   </div>
 </header>
 
 <script>
 var url = window.location;
-
-if(location.pathname != "/") {
-	$('#brand').removeClass('crd-fade');
-	$('#brand2').removeClass('crd-fade2');
-}
-
 
 $('ul.nav > li').removeClass('active');
 // Will only work if string in href matches with location
@@ -38,4 +34,14 @@ $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
 $('ul.nav a').filter(function() {
     return this.href == url;
 }).parent().addClass('active');
+
+
+if(location.pathname != "/" || window.location.href.indexOf("root") > -1) {
+  $('#brand').removeClass('crd-fade');
+  $('#brand2').removeClass('crd-fade2');
+  $('#nav').removeClass('fadeInLeftBig');
+  /*if(window.location.href.indexOf("root") > -1)
+    $('.root').parent().addClass('active');*/
+}
+
 </script>
